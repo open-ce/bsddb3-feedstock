@@ -1,5 +1,5 @@
 {% set name = "bsddb3" %}
-{% set version = "6.2.7" %}
+{% set version = "6.2.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b0f7fa63eb240cd5815809c9d1d7df9f7cc8d6fa9619d0edbe9c794afc02dc9f
+  sha256: 22dc12cd8ab5d2458769e070534af3c42ad85d66880e28a55cdfd234494e8da3
 
 build:
-  number: 2
-  skip: True     # [win or py2k]
+  number: 0
+  skip: true  # [win or py2k]
 
 requirements:
   build:
@@ -33,7 +33,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Python bindings for Oracle Berkeley DB'
+  summary: Python bindings for Oracle Berkeley DB
 
   description: |
     This module provides a nearly complete wrapping of the Oracle/Sleepycat C API for the Database Environment, 
